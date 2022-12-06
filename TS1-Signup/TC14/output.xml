@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.8.10 on linux)" generated="20221206 12:49:39.158" rpa="false" schemaversion="3">
+<suite id="s1" name="SU14" source="/home/farah/Desktop/DRC-QualityAssurance/TS1-Signup/TC14/SU14.robot">
+<test id="s1-t1" name="Navigate To Syntrade Signup Page" line="13">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://app.syntrade.xyz/signup</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221206 12:49:39.280" level="INFO">Opening browser 'chrome' to base url 'https://app.syntrade.xyz/signup'.</msg>
+<status status="PASS" starttime="20221206 12:49:39.280" endtime="20221206 12:49:40.266"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221206 12:49:40.266" endtime="20221206 12:49:40.375"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@id="signup_form"]</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221206 12:49:40.376" endtime="20221206 12:49:40.398"/>
+</kw>
+<status status="PASS" starttime="20221206 12:49:39.279" endtime="20221206 12:49:40.398"/>
+</test>
+<test id="s1-t2" name="Input A Valid Email" line="18">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>email</arg>
+<arg>testingqa@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221206 12:49:40.401" level="INFO">Typing text 'testingqa@gmail.com' into text field 'email'.</msg>
+<status status="PASS" starttime="20221206 12:49:40.401" endtime="20221206 12:49:40.521"/>
+</kw>
+<status status="PASS" starttime="20221206 12:49:40.400" endtime="20221206 12:49:40.521"/>
+</test>
+<test id="s1-t3" name="Input A Password" line="21">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>Abcde1234!</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221206 12:49:40.523" level="INFO">Typing text 'Abcde1234!' into text field 'password'.</msg>
+<status status="PASS" starttime="20221206 12:49:40.522" endtime="20221206 12:49:40.614"/>
+</kw>
+<status status="PASS" starttime="20221206 12:49:40.522" endtime="20221206 12:49:40.614"/>
+</test>
+<test id="s1-t4" name="Click The Signup Button" line="24">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>submit</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221206 12:49:40.616" level="INFO">Clicking element 'submit'.</msg>
+<status status="PASS" starttime="20221206 12:49:40.616" endtime="20221206 12:49:40.659"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>invalid_confirm_password_msg</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221206 12:49:40.685" level="INFO">Element 'invalid_confirm_password_msg' is displayed.</msg>
+<status status="PASS" starttime="20221206 12:49:40.660" endtime="20221206 12:49:40.685"/>
+</kw>
+<status status="PASS" starttime="20221206 12:49:40.615" endtime="20221206 12:49:40.685"/>
+</test>
+<status status="PASS" starttime="20221206 12:49:39.159" endtime="20221206 12:49:40.686"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="SU14">SU14</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
